@@ -1,0 +1,71 @@
+Sub StockTickerCount()
+
+' --------------------------------------------
+    ' LOOP THROUGH ALL SHEETS
+    ' --------------------------------------------
+For Each ws In Worksheets
+           Dim worksheetname As String
+           worksheetname = ws.Name
+
+  ' Set an initial variable for holding the ticker
+  Dim ticker As String
+
+  ' Set an initial variable for holding the total volume per ticker
+  Dim ticker_volume As Double
+  ticker_volume = 0
+
+  ' Set an initial variable for holding the year
+  Dim year As Integer
+  year = 0
+
+  ' Keep track of the location for each ticker in the summary table
+  Dim Summary_Table_Row As Integer
+  Summary_Table_Row = 2
+
+  
+
+  ' Determine the Last Row
+        LastRow = ws.Cells(Rows.Count, 1).End(xlUp).Row
+
+    ' Put titles on columns I and J
+    ws.Range("I1") = "Ticker"
+    ws.Range("J1") = "Total Stock Volume"
+    
+  ' Loop through all tickers
+  For i = 2 To LastRow
+
+    ' Check if we are still within the same ticker, if it is not...
+    If ws.Cells(i + 1, 1).Value <> ws.Cells(i, 1).Value Then
+
+      ' Set the ticker
+      ticker = ws.Cells(i, 1).Value
+
+      ' Add to the Ticker Volume
+      ticker_volume = ticker_volume + ws.Cells(i, 7).Value
+
+      ' Print the ticker in the Summary Table
+      ws.Range("I" & Summary_Table_Row).Value = ticker
+
+      ' Print the ticker_count to the Summary Table
+      ws.Range("J" & Summary_Table_Row).Value = ticker_volume
+
+      ' Add one to the summary table row
+      Summary_Table_Row = Summary_Table_Row + 1
+      
+      ' Reset the ticker_volume
+      ticker_volume = 0
+
+    ' If the cell immediately following a row is the same ticker...
+    Else
+
+      ' Add to the ticker_volume
+      ticker_volume = ticker_volume + ws.Cells(i, 7).Value
+
+    End If
+
+  Next i
+
+Next ws
+
+End Sub
+
