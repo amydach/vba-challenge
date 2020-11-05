@@ -29,4 +29,4 @@ You will use VBA scripting to analyze real stock market data.
 
   * VBA Script as separate file.
 
-## Note:  Copy code from "Stock Ticker Easy Script.txt" file into VBA for each Excel file and execute.
+* Note:  Copy code from "Stock Ticker Easy Script.txt" file into VBA for each Excel file and execute.
