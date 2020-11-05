@@ -29,3 +29,4 @@ You will use VBA scripting to analyze real stock market data.
 
   * VBA Script as separate file.
 
+## Note:  Code is added to each each Excel file and is ready to execute.
