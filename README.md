@@ -8,7 +8,7 @@ You will use VBA scripting to analyze real stock market data.
 
 * [Test Data](Resources/alphabtical_testing.xlsx) - Use this while developing your scripts.
 
-* [Stock Data](Resources/Multiple_year_stock_data.xlsx) - Run your scripts on this data to generate the final homework report.
+* [Stock Data](Resources/Multiple_year_stock_data.xlsx) - Run your scripts on this data to generate the final report.
 
 ### Stock market analyst
 
@@ -29,4 +29,4 @@ You will use VBA scripting to analyze real stock market data.
 
   * VBA Script as separate file.
 
-## Note:  Code is added to each each Excel file and is ready to execute.
+## Note:  Copy code from "Stock Ticker Easy Script.txt" file into VBA for each Excel file and execute.
