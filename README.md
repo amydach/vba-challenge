@@ -12,7 +12,7 @@ You will use VBA scripting to analyze real stock market data.
 
 ### Stock market analyst
 
-![stock Market](Images/stockmarket.jpg)
+![Stock Market](Images/stockmarket.jpg)
 
 ### Project
 
